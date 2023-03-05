@@ -24,38 +24,30 @@ limitations under the License.
 
 > Generate pseudorandom numbers drawn from an [exponential][@stdlib/random/base/exponential] distribution.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random-exponential
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-exponential = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-exponential@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var exponential = require( 'path/to/vendor/umd/random-exponential/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-exponential@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.exponential;
-})();
-</script>
+var exponential = require( '@stdlib/random-exponential' );
 ```
 
 #### exponential( shape, lambda\[, options] )
@@ -105,7 +97,7 @@ The function accepts the following `options`:
 
 -   **dtype**: output array data type. Must be a [real-valued floating-point data type][@stdlib/array/typed-real-float-dtypes] or "generic". Default: `'float64'`.
 -   **order**: array order (i.e., memory layout), which is either `row-major` (C-style) or `column-major` (Fortran-style). Default: `'row-major'`.
--   **mode**: specifies how to handle indices which exceed array dimensions (see [`ndarray`][@stdlib/ndarray/ctor]). Default: `'throw'`.
+-   **mode**: specifies how to handle indices which exceed array dimensions. For a list of supported modes, see [`ndarray`][@stdlib/ndarray/ctor]. Default: `'throw'`.
 -   **submode**: a mode array which specifies for each dimension how to handle subscripts which exceed array dimensions. If provided fewer modes than dimensions, the returned function recycles modes using modulo arithmetic. Default: `[ options.mode ]`.
 -   **readonly**: `boolean` indicating whether an array should be **read-only**. Default: `false`.
 
@@ -181,7 +173,7 @@ The function accepts the following `options`:
 -   **copy**: `boolean` indicating whether to copy a provided pseudorandom number generator state. Setting this option to `false` allows sharing state between two or more pseudorandom number generators. Setting this option to `true` ensures that an underlying generator has exclusive control over its internal state. Default: `true`.
 -   **dtype**: default output array data type. Must be a [real-valued floating-point data type][@stdlib/array/typed-real-float-dtypes] or "generic". Default: `'float64'`.
 -   **order**: default array order (i.e., memory layout), which is either `row-major` (C-style) or `column-major` (Fortran-style). Default: `'row-major'`.
--   **mode**: default specifying how to handle indices which exceed array dimensions (see [`ndarray`][@stdlib/ndarray/ctor]). Default: `'throw'`.
+-   **mode**: default specifying how to handle indices which exceed array dimensions. For a list of supported modes, see [`ndarray`][@stdlib/ndarray/ctor]. Default: `'throw'`.
 -   **submode**: default specifying for each dimension how to handle subscripts which exceed array dimensions. If provided fewer modes than dimensions, the constructor recycles modes using modulo arithmetic. Default: `[ options.mode ]`.
 -   **readonly**: default indicating whether an array should be **read-only**. Default: `false`.
 
@@ -215,7 +207,7 @@ The returned function accepts the following `options`, each of which overrides t
 
 -   **dtype**: output array data type. Must be a [real-valued floating-point data type][@stdlib/array/typed-real-float-dtypes] or "generic".
 -   **order**: array order (i.e., memory layout), which is either `row-major` (C-style) or `column-major` (Fortran-style).
--   **mode**: specifies how to handle indices which exceed array dimensions (see [`ndarray`][@stdlib/ndarray/ctor]).
+-   **mode**: specifies how to handle indices which exceed array dimensions. For a list of supported modes, see [`ndarray`][@stdlib/ndarray/ctor].
 -   **submode**: a mode array which specifies for each dimension how to handle subscripts which exceed array dimensions. If provided fewer modes than dimensions, the returned function recycles modes using modulo arithmetic.
 -   **readonly**: `boolean` indicating whether an array should be **read-only**.
 
@@ -380,15 +372,10 @@ var sz = random.byteLength;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-exponential@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var logEach = require( '@stdlib/console-log-each' );
+var toArray = require( '@stdlib/ndarray-to-array' );
+var exponential = require( '@stdlib/random-exponential' );
 
 // Create a function for generating random arrays originating from the same state:
 var random = exponential.factory({
@@ -419,11 +406,6 @@ var arr = toArray( x4 );
 // Print the contents:
 console.log( '' );
 logEach( '%f, %f, %f', arr[ 0 ], arr[ 1 ], arr[ 2 ] );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -507,15 +489,15 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/random-exponential/main/LICENSE
 
-[@stdlib/random/base/exponential]: https://github.com/stdlib-js/random-base-exponential/tree/umd
+[@stdlib/random/base/exponential]: https://github.com/stdlib-js/random-base-exponential
 
-[@stdlib/array/typed-real-float-dtypes]: https://github.com/stdlib-js/array-typed-real-float-dtypes/tree/umd
+[@stdlib/array/typed-real-float-dtypes]: https://github.com/stdlib-js/array-typed-real-float-dtypes
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/umd
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes/tree/umd
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes
 
 </section>
 
