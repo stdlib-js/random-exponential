@@ -75,7 +75,7 @@
     "@stdlib/math-base-special-sqrt": "^0.0.8",
     "@stdlib/ndarray-array": "^0.0.9",
     "@stdlib/ndarray-base-from-scalar": "^0.0.1",
-    "@stdlib/ndarray-to-array": "github:stdlib-js/ndarray-to-array#main",
+    "@stdlib/ndarray-to-array": "^0.0.1",
     "@stdlib/ndarray-zeros": "^0.0.1",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
