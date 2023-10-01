@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@stdlib/array-base-filled-by": "^0.1.0",
-    "@stdlib/array-base-zeros": "^0.1.0",
+    "@stdlib/array-base-zeros": "^0.1.1",
     "@stdlib/array-typed-real-float-ctors": "^0.1.0",
     "@stdlib/array-typed-real-float-dtypes": "^0.1.0",
     "@stdlib/assert-has-own-property": "^0.1.0",
