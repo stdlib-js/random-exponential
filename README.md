@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-exponential@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/random-exponential/tags). For example,
+
+```javascript
 import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-exponential@v0.2.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-exponential@v0.2.1-deno/mod.js';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-exponential@deno/mod.js';
 ```
 
 #### exponential( shape, lambda\[, options] )
@@ -376,7 +381,7 @@ var sz = random.byteLength;
 ```javascript
 import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@deno/mod.js';
 import toArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-exponential@v0.2.1-deno/mod.js';
+import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-exponential@deno/mod.js';
 
 // Create a function for generating random arrays originating from the same state:
 var random = exponential.factory({
