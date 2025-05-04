@@ -18,7 +18,7 @@
 
 // TypeScript Version: 4.1
 
-/// <reference types="@stdlib/types"/>
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
 import { RealFloatingPointAndGenericDataType as DataType, floatndarray, genericndarray, Order, Mode, Shape, typedndarray } from '@stdlib/types/ndarray';
 import * as random from '@stdlib/types/random';
