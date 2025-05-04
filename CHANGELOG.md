@@ -2,6 +2,58 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2025-05-04)
+
+<section class="breaking-changes">
+
+### BREAKING CHANGES
+
+-   [`62ed403`](https://github.com/stdlib-js/stdlib/commit/62ed40363834199d5dfabb4968d9f63a6539b198): drop support for default options
+
+    -   Previously, the `factory` method supported providing defaults for
+        various ndarray options (e.g., readonly, mode, order, etc). These
+        options have been removed. Instead, users should pass them along
+        to the main API for generating pseudorandom numbers. To replicate
+        previous functionality, create your own wrapper which uses partial
+        application to pass a set of \"default\" options for each invocation
+        of the PRNG function.
+
+</section>
+
+<!-- /.breaking-changes -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`62ed403`](https://github.com/stdlib-js/stdlib/commit/62ed40363834199d5dfabb4968d9f63a6539b198) - **refactor:** migrate to `random/tools/unary-factory` and drop support for default options _(by Athan Reines)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Athan Reines
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.1">
 
 ## 0.2.1 (2024-02-25)
