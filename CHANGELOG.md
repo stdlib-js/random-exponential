@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-19)
+## Unreleased (2025-08-18)
 
 <section class="breaking-changes">
 
@@ -30,6 +30,7 @@
 
 <details>
 
+-   [`54da286`](https://github.com/stdlib-js/stdlib/commit/54da28610f5ee6b2aa181addb1775d32f79043ee) - **test:** use .strictEqual() instead of .equal() and fix lint errors _(by Philipp Burckhardt)_
 -   [`283b1eb`](https://github.com/stdlib-js/stdlib/commit/283b1eb0ae0b7b750185f9d62a678820f937ce34) - **docs:** update copy _(by Athan Reines)_
 -   [`b1d7e8d`](https://github.com/stdlib-js/stdlib/commit/b1d7e8d50fc1d123e89d308607c366d96d713d61) - **docs:** update example _(by Athan Reines)_
 -   [`b8db168`](https://github.com/stdlib-js/stdlib/commit/b8db1682f82b5c08a2a09627a21804d1739cced4) - **docs:** use attribute accessors in examples _(by Athan Reines)_
@@ -50,9 +51,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Philipp Burckhardt
 
 </section>
 
