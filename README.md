@@ -84,7 +84,7 @@ When provided a scalar distribution parameter, every element in the output [ndar
 var getShape = require( '@stdlib/ndarray-shape' );
 var array = require( '@stdlib/ndarray-array' );
 
-var lambda = array( [ [ [ 2.0 ] ], [ [ 5.0 ] ] ] );
+var lambda = array( [ [ [ 2.0 ] ], [ [ 10.0 ] ] ] );
 // returns <ndarray>
 
 var shape = getShape( lambda );
@@ -129,7 +129,7 @@ var opts = {
 var arr = exponential( [ 3, 3 ], 2.0, opts );
 // returns <ndarray>
 
-var dt = getDType( arr );
+var dt = String( getDType( arr ) );
 // returns 'generic'
 ```
 
@@ -349,7 +349,7 @@ var sz = random.byteLength;
 
 ```javascript
 var logEach = require( '@stdlib/console-log-each' );
-var toArray = require( '@stdlib/ndarray-to-array' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 var exponential = require( '@stdlib/random-exponential' );
 
 // Create a function for generating random arrays originating from the same state:
@@ -364,7 +364,7 @@ var x2 = random( [ 5 ], 2.0 );
 var x3 = random( [ 5 ], 2.0 );
 
 // Print the contents:
-logEach( '%f, %f, %f', toArray( x1 ), toArray( x2 ), toArray( x3 ) );
+logEach( '%f, %f, %f', ndarray2array( x1 ), ndarray2array( x2 ), ndarray2array( x3 ) );
 
 // Create another function for generating random arrays with the original state:
 random = exponential.factory({
@@ -376,7 +376,7 @@ random = exponential.factory({
 var x4 = random( [ 3, 5 ], 2.0 );
 
 // Convert to a list of nested arrays:
-var arr = toArray( x4 );
+var arr = ndarray2array( x4 );
 
 // Print the contents:
 console.log( '' );
@@ -447,8 +447,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
