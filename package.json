@@ -69,7 +69,7 @@
     "@stdlib/ndarray-to-array": "^0.2.1",
     "@stdlib/ndarray-zeros": "^0.3.0",
     "@stdlib/random-base-minstd": "^0.2.1",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
