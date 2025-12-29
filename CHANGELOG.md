@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-27)
+## Unreleased (2025-12-29)
 
 <section class="breaking-changes">
 
@@ -30,6 +30,7 @@
 
 <details>
 
+-   [`73f0550`](https://github.com/stdlib-js/stdlib/commit/73f055020dcc55a92d32c1cba59a7143d833813f) - **docs:** update dtype type _(by Athan Reines)_
 -   [`9446418`](https://github.com/stdlib-js/stdlib/commit/9446418669fdcae9b9b9b9ba0599aea38e2e4f29) - **chore:** clean-up tests, benchmarks, and examples _(by Athan Reines)_
 -   [`54da286`](https://github.com/stdlib-js/stdlib/commit/54da28610f5ee6b2aa181addb1775d32f79043ee) - **test:** use .strictEqual() instead of .equal() and fix lint errors _(by Philipp Burckhardt)_
 -   [`283b1eb`](https://github.com/stdlib-js/stdlib/commit/283b1eb0ae0b7b750185f9d62a678820f937ce34) - **docs:** update copy _(by Athan Reines)_
